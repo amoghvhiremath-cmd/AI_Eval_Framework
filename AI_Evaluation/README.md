@@ -152,8 +152,9 @@ The task-match cosine threshold (default `0.65`) is a constant in `src/metrics.p
 ## Project structure
 
 ```
-itsm-eval-poc/
+AI_Evaluation/
   README.md
+
   requirements.txt
   smoke_test.py          # API key + model connectivity check
   data/
