@@ -1,0 +1,79 @@
+[
+  {
+    "ticket_id": "INC-10492",
+    "category": "identity_and_access",
+    "priority": "P2",
+    "source": {
+      "description": "Software license activations are failing because an expired license synchronization token blocked newly deployed software from activating, delaying employee onboarding. Affected service: Access Governance Platform; affected CI: Privileged Access Management System.",
+      "comments": [
+        "Refresh of the license server completed but the problem persists.",
+        "Troubleshooting focused on validating assigned credentials for invalid credentials.",
+        "Investigation in progress; credential verification is the next diagnostic step."
+      ],
+      "diagnostics": "Expired or invalid license synchronization token preventing activation. High-confidence match to prior incidents on the same CI. Server refresh did not resolve it; credential validation in progress."
+    },
+    "references": {
+      "ticket_summary": "License activations are failing due to an expired license synchronization token, blocking newly deployed software and delaying onboarding. Affects the Access Governance Platform and Privileged Access Management System.",
+      "comment_summary": "A license server refresh did not fix the issue. Troubleshooting then focused on validating credentials. Investigation is ongoing with credential verification as the next step.",
+      "diagnostics_summary": "An expired/invalid license synchronization token is blocking activation on the Privileged Access Management System; a server refresh failed and credential validation is underway.",
+      "resolution_summary": "Resolved by renewing the expired license synchronization credentials and confirming successful communication with the license server.",
+      "suggested_tasks": [
+        "Verify the license synchronization token status and expiration",
+        "Regenerate the token if expired and validate it is recognized",
+        "Validate license server connectivity and review logs for auth/sync errors",
+        "Reprocess the failed license activations",
+        "Verify resolution and monitor for recurrence"
+      ]
+    },
+    "output": {
+      "ticket_summary": "License activation is failing because a license sync token expired, which stopped new software from activating and slowed onboarding on the Access Governance Platform.",
+      "comment_summary": "Refreshing the license server did not help. The team then checked credentials. Work is ongoing, with credential verification next.",
+      "diagnostics_summary": "An expired license synchronization token is blocking activation on the Privileged Access Management System; a refresh did not fix it and credentials are being validated.",
+      "resolution_summary": "Fixed by renewing the expired license synchronization credentials and confirming the license server responded.",
+      "suggested_tasks": [
+        "Check the license sync token status and expiration",
+        "Regenerate the token if it has expired and confirm it is recognized",
+        "Check license server connectivity and review authentication/sync logs",
+        "Re-run the failed license activations"
+      ]
+    }
+  },
+  {
+    "ticket_id": "INC-10510",
+    "category": "network",
+    "priority": "P3",
+    "source": {
+      "description": "Users on the 3rd floor report intermittent WiFi drops since this morning. Affected CI: Floor-3 access point AP-3B.",
+      "comments": [
+        "Confirmed AP-3B showing repeated deauth events in the controller logs.",
+        "Rebooted AP-3B; drops reduced but not eliminated.",
+        "Replaced AP-3B with a spare unit; no drops observed for 2 hours."
+      ],
+      "diagnostics": "Controller logs show repeated deauthentication events isolated to AP-3B. Signal strength normal on adjacent APs. Points to failing access point hardware."
+    },
+    "references": {
+      "ticket_summary": "Intermittent WiFi drops on the 3rd floor since morning, traced to access point AP-3B.",
+      "comment_summary": "AP-3B showed repeated deauth events. A reboot reduced but did not stop drops; replacing the unit with a spare eliminated them.",
+      "diagnostics_summary": "Repeated deauthentication events isolated to AP-3B with normal signal on adjacent APs indicate failing access point hardware.",
+      "resolution_summary": "Resolved by replacing the failing access point AP-3B with a spare unit, after which no drops were observed.",
+      "suggested_tasks": [
+        "Review controller logs for the affected access point",
+        "Reboot the access point and observe",
+        "If drops persist, replace the access point with a spare",
+        "Monitor for recurrence after replacement"
+      ]
+    },
+    "output": {
+      "ticket_summary": "Third-floor users have had intermittent WiFi drops since the morning; the issue is linked to access point AP-3B.",
+      "comment_summary": "Logs showed deauth events on AP-3B. Rebooting helped only partially, so the AP was swapped for a spare and drops stopped.",
+      "diagnostics_summary": "Deauthentication events limited to AP-3B, with adjacent APs normal, suggest the access point hardware is failing.",
+      "resolution_summary": "Fixed by swapping the faulty AP-3B for a spare, after which the connection was stable.",
+      "suggested_tasks": [
+        "Check controller logs for the access point in question",
+        "Reboot the access point and watch for drops",
+        "Replace the access point with a spare if drops continue",
+        "Keep monitoring after the swap"
+      ]
+    }
+  }
+]
