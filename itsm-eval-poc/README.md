@@ -1,4 +1,4 @@
-# ITSM AI Eval PoC
+# AI Eval PoC
 
 A local proof-of-concept that evaluates the quality of AI-generated content produced by an ITSM (IT Service Management) application, using [RAGAS](https://docs.ragas.io/) with an OpenAI judge.
 
@@ -6,7 +6,7 @@ A local proof-of-concept that evaluates the quality of AI-generated content prod
 
 ## What it does
 
-The ITSM app uses LLMs (Claude, in production) to auto-generate five artifacts per ticket:
+The app uses LLMs (in production) to auto-generate five artifacts per ticket:
 
 | Artifact | Description |
 |---|---|
