@@ -40,3 +40,8 @@ env/
 # Output reports & local test artifacts
 report.json
 *.log
+
+# Design / brief docs
+ITSM_AI_Eval_PoC_Cursor_Build_Brief.md
+ITSM_AI_Eval_PoC_Implementation_Plan.md
+
