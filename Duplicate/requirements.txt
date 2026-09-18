@@ -1,0 +1,4 @@
+ragas==0.2.14
+langchain-openai==0.2.14
+pydantic>=2.6
+numpy>=1.26
